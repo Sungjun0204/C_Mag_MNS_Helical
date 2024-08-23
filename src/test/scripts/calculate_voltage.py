@@ -37,6 +37,8 @@ def B_R(t):
                     ))[:, np.newaxis]
 
 def I(t):
+    # print(pinv(pinv(actuation)))
+    print(B_R(t).T)
     return pinv(actuation).dot(B_R(t))
 
 def V(t):
